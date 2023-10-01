@@ -1,5 +1,3 @@
-use std::{f64::consts::PI, io::BufRead};
-
 use egui::{Color32, TextStyle};
 use egui_plot::{AxisBools, Legend, Line, Plot, PlotPoints, Points};
 
@@ -150,13 +148,6 @@ impl PlotLines {
         }
     }
 
-    fn get_lines(&self) -> (Option<&PlotLine>, &Vec<PlotLine>) {
-        if let Some(ix) = self.selected_base_line {
-            (Some(&self.plot_lines[ix]), &self.plot_lines)
-        } else {
-            (None, &self.plot_lines)
-        }
-    }
     fn get_base_line_name(&self) -> Option<&str> {
         Some(&self.plot_lines[self.selected_base_line?].name)
     }
