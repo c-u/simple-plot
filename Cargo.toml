@@ -5,19 +5,23 @@ edition = "2021"
 rust-version = "1.70"
 
 [dependencies]
-egui = "0.22.0"
-eframe = { version = "0.22.0", default-features = false, features = [
+egui = "0.23.0"
+egui_plot = "*"
+eframe = { version = "0.23.0", default-features = false, features = [
     "accesskit",     # Make egui comptaible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
     "persistence",   # Enable restoring app state when restarting the app.
+    "serde",
 ] }
 log = "0.4"
 rfd = "0.11"
+fancy-regex = "0.11"
 poll-promise = { version = "*", features = ["web"] }
 
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
+regextractor = { git = "https://github.com/c-u/regextractor.git" }
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]

@@ -15,6 +15,7 @@ impl SelectedFile {
     }
 }
 
+#[derive(Default)]
 pub(crate) struct AsyncFileSelector {
     file: Option<Promise<Option<SelectedFile>>>,
 }
