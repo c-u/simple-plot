@@ -1,6 +1,6 @@
 {
-  "name": "egui Template PWA",
-  "short_name": "egui-template-pwa",
+  "name": "simple-plot PWA",
+  "short_name": "simple-plot-pwa",
   "icons": [
     {
       "src": "./icon.png",
