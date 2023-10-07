@@ -92,7 +92,7 @@ fn read_native() -> Option<Promise<Option<SelectedFile>>> {
 
 #[cfg(target_arch = "wasm32")]
 fn read_web() -> Option<Promise<Option<SelectedFile>>> {
-    Some(Promise::spawn_async(async {
+    Some(Promise::spawn_local(async {
         if let Some(file_handle) = rfd::AsyncFileDialog::new().pick_file().await {
             Some(SelectedFile {
                 file_name: file_handle.file_name(),

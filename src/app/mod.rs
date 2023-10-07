@@ -58,10 +58,9 @@ impl eframe::App for TemplateApp {
     }
 
     /// Called each time the UI needs repainting, which may be many times per second.
-    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::SidePanel::left("side_panel")
             .resizable(false)
-            .max_width(frame.info().window_info.size.x / 4.0)
             .show(ctx, |ui| {
                 self.regextractor.draw_side_panel(ui);
                 Self::acknowledge(ui);

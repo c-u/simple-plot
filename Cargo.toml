@@ -15,9 +15,9 @@ eframe = { version = "0.23.0", default-features = false, features = [
     "serde",
 ] }
 log = "0.4"
-rfd = "0.11"
+rfd = "0.12"
 fancy-regex = "0.11"
-poll-promise = { version = "*", features = ["web"] }
+poll-promise = { version = "0.3", features = ["web"] }
 
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
