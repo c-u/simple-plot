@@ -10,13 +10,6 @@ pub(crate) struct DataFile {
 }
 
 impl DataFile {
-    pub(crate) fn new() -> Self {
-        DataFile {
-            file: None,
-            file_selector: file_reader::AsyncFileSelector::new(),
-        }
-    }
-
     pub(crate) fn draw(&mut self, ui: &mut egui::Ui) {
         ui.heading("File");
         self.open_file(ui);

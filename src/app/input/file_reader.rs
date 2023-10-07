@@ -28,10 +28,6 @@ pub(crate) enum FileResult {
 }
 
 impl AsyncFileSelector {
-    pub(crate) fn new() -> Self {
-        Self { file: None }
-    }
-
     pub(crate) fn select(&mut self) {
         self.file = read();
     }
